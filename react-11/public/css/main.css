@@ -2,10 +2,54 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	background-color: #f2f2f2;
-	font-family: 'Montserrat', 'Arial';
+  background-color: #f2f2f2;
+  font-family: 'Montserrat', 'Arial';
+  font-size: 10px;
+}
+
+.hero {
+  background-image: url('../img/capa-madmax2.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+}
+
+.hero-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 960px;
+}
+
+.hero-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-user {
+	align-items: center;
+	display: flex;
+}
+
+.hero-user-photo {
+	height: 45px;
+	widht: 45px;
+	border-radius: 50%;
+}
+
+.hero-user-name {
+	color: #fff;
+	font-size: 1.3em;
+	font-weight: bold;
 }
