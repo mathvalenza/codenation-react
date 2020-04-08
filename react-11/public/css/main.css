@@ -16,11 +16,11 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 90vh;
+  justify-content: space-between;
   padding: 20px;
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 
 .hero-nav {
@@ -31,8 +31,8 @@ body {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  width: 960px;
   margin: 0 auto;
+  width: 960px;
 }
 
 .hero-menu {
@@ -51,19 +51,19 @@ body {
 }
 
 .hero-user {
-	align-items: center;
-	display: flex;
+  align-items: center;
+  display: flex;
 }
 
 .hero-user-photo {
-	height: 45px;
-	widht: 45px;
+  height: 45px;
+  widht: 45px;
   border-radius: 50%;
   margin-right: 15px;
 }
 
 .hero-user-name {
-	color: #fff;
-	font-size: 1.3em;
-	font-weight: bold;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
 }
