@@ -12,6 +12,7 @@ body {
 }
 
 .hero {
+  background-attachment: fixed;
   background-image: url('../img/capa-madmax2.jpg');
   background-size: cover;
   display: flex;
@@ -20,6 +21,15 @@ body {
   justify-content: space-between;
   padding: 20px;
   position: relative;
+  width: 100%;
+}
+
+.hero::after {
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
   width: 100%;
 }
 
@@ -107,4 +117,21 @@ body {
   position: absolute;
   right: 15px;
   top: 12px;
+}
+
+.hero-info {
+  padding: 20px 0;
+  font-size: 1.4em;
+}
+
+.hero-info p {
+  margin: 14px 0;
+}
+
+.hero-info-title {
+  color: #fff;
+}
+
+.hero-info-subtitle {
+  color: #bc9a1d;
 }
