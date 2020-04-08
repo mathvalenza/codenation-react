@@ -25,6 +25,7 @@ body {
 }
 
 .hero::after {
+  background: linear-gradient( 0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 212, 255, 0) 75% );
   content: "";
   height: 100%;
   left: 0;
@@ -77,6 +78,10 @@ body {
   color: #fff;
   font-size: 1.3em;
   font-weight: bold;
+}
+
+.hero-content {
+  z-index: 2;
 }
 
 .hero-title {
