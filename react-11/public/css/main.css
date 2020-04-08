@@ -18,11 +18,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 90vh;
+  padding: 20px;
+  width: 100%;
+  position: relative;
 }
 
 .hero-nav {
   display: flex;
-  justify-content: center;
 }
 
 .container {
@@ -30,11 +32,22 @@ body {
   display: flex;
   justify-content: space-between;
   width: 960px;
+  margin: 0 auto;
 }
 
 .hero-menu {
   display: flex;
   justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.hero-menu-item {
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0 25px;
+  text-transform: uppercase;
 }
 
 .hero-user {
@@ -45,7 +58,8 @@ body {
 .hero-user-photo {
 	height: 45px;
 	widht: 45px;
-	border-radius: 50%;
+  border-radius: 50%;
+  margin-right: 15px;
 }
 
 .hero-user-name {
