@@ -67,10 +67,10 @@ body {
 }
 
 .hero-user-photo {
-  height: 45px;
-  widht: 45px;
   border-radius: 50%;
+  height: 45px;
   margin-right: 15px;
+  width: 45px;
 }
 
 .hero-user-name {
@@ -124,8 +124,8 @@ body {
 }
 
 .hero-info {
-  padding: 20px 0;
   font-size: 1.4em;
+  padding: 20px 0;
 }
 
 .hero-info p {
@@ -150,9 +150,9 @@ body {
   display: flex;
   justify-content: center;
   list-style: none;
+  margin: 0 auto;
   padding: 0 20px;
   padding: 0;
-  margin: 0 auto;
   width: 100%;
 }
 
@@ -167,10 +167,9 @@ body {
 .catalog-list-item a {
   color: #e4bb23;
   display: inline-block;
-  padding: 25px 0;
   font-size: 1.3em;
   font-weight: bold;
+  padding: 25px 0;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
 }
