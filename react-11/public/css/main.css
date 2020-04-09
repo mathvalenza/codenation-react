@@ -6,7 +6,6 @@
 }
 
 body {
-  background-color: #f2f2f2;
   font-family: 'Montserrat', 'Arial';
   font-size: 10px;
 }
@@ -139,4 +138,39 @@ body {
 
 .hero-info-subtitle {
   color: #bc9a1d;
+}
+
+.catalog {
+  background-color: #f2f2f2;
+}
+
+.catalog-list {
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0 20px;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.catalog-list-item {
+  margin: 0 20px;
+}
+
+.catalog-list-item:hover {
+  box-shadow: inset 0 -1px 0 #e4bb23
+}
+
+.catalog-list-item a {
+  color: #e4bb23;
+  display: inline-block;
+  padding: 25px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
 }
