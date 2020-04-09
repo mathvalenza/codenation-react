@@ -144,7 +144,7 @@ body {
   background-color: #f2f2f2;
 }
 
-.catalog-list {
+.catalog-menu-list {
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
@@ -156,15 +156,15 @@ body {
   width: 100%;
 }
 
-.catalog-list-item {
+.catalog-menu-list-item {
   margin: 0 20px;
 }
 
-.catalog-list-item:hover {
+.catalog-menu-list-item:hover {
   box-shadow: inset 0 -1px 0 #e4bb23
 }
 
-.catalog-list-item a {
+.catalog-menu-list-item a {
   color: #e4bb23;
   display: inline-block;
   font-size: 1.3em;
@@ -172,4 +172,122 @@ body {
   padding: 25px 0;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.catalog-film-list {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+  width: 100%;
+  list-style: none;
+}
+
+.catalog-film-list-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  overflow: hidden;
+  width: 24%;
+}
+
+.catalog-film-list-item:hover .film-poster-info {
+  opacity: 1;
+  visibility: visible;
+}
+
+.film-poster {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.film-poster img {
+  width: 100%;
+  height: auto;
+}
+
+.film-poster-info {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  padding: 80px 20px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1;
+}
+
+.film-poster-info h3 {
+  color: #e4bb23;
+  font-size: 2em;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.film-poster-info a {
+  color: #fff;
+  font-size: 5em;
+}
+
+.film-poster-info a:hover {
+  color: #e4bb23;
+}
+
+.film-info {
+  padding: 10px;
+}
+
+.film-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.film-genre {
+  maring: 10px 0;
+}
+
+.film-genre a {
+  color: #e4bb23;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.film-genre a:hover {
+  text-decoration: underline;
+}
+
+.film-score {
+  margin: 0;
+  align-items: center;
+  display: flex;
+  font-size: 2em;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+.film-score i {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.film-score i:hover {
+  color: #e74c3c;
 }
