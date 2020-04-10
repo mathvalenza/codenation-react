@@ -291,3 +291,34 @@ body {
 .film-score i:hover {
   color: #e74c3c;
 }
+
+.custom-footer {
+  background-color: #fff;
+  color: #bababa;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.footer-list-item {
+  font-size: 25px;
+}
+
+.footer-list-item:not(:last-child) {
+  margin: 0 20px;
+}
+
+.footer-list-item:last-child {
+  margin: 0 0 0 20px;
+}
+
+.footer-list-item i {
+  color: #bababa;
+}
