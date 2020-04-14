@@ -3,13 +3,55 @@
 *,
 *:after,
 *:before {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+html {
+	font-size: 10px;
+}
 
+body {
+  background-color: #FAFAFA;
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+}
 
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
 
+@media screen and (min-width: 728px) {
+  .container {
+    width: 728px;
+  }
+}
 
+.header {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+  padding: 8px 16px;
+}
 
+.header .container {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.header__logo {
+  display: inline-block;
+  height: 40px;
+}
+
+.header__logo img {
+  height: 100%;
+}
+
+.header__message-icon {
+  color: #000;
+  font-size: 1.6rem;
+  text-decoration: none;
+  padding-right: 6px;
+}
 
 
