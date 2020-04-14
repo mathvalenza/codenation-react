@@ -104,12 +104,14 @@ button {
 .feed {
   display: flex;
   flex-direction: column;
-  padding: 16px 0;
+  padding: 16px;
   width: 100%;
 }
 
-@media screen and (min-width: 728px) .feed {
-  padding: 16px 0;
+@media screen and (min-width: 728px) {
+  .feed {
+    padding: 16px 0;
+  }
 }
 
 .post {
@@ -157,4 +159,12 @@ button {
 
 .post__button {
   font-size: 1.4rem;
+}
+
+.post__photo {
+  margin: 0;
+}
+
+.post__photo img {
+  width: 100%;
 }
