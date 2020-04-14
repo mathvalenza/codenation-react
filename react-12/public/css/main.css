@@ -157,7 +157,7 @@ button {
   text-decoration: none;
 }
 
-.post__button {
+.post__context {
   font-size: 1.4rem;
 }
 
@@ -167,4 +167,20 @@ button {
 
 .post__photo img {
   width: 100%;
+}
+
+.post__options {
+  display: flex;
+  justify-content: flex-start;
+  padding: 4px 0;
+}
+
+.post__button {
+  font-size: 2.4rem;
+  margin: 0 8px;
+}
+
+.post__button--right {
+  margin-left: auto;
+  justify-self: flex-end;
 }
