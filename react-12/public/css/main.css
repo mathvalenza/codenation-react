@@ -7,13 +7,20 @@
 }
 
 html {
-	font-size: 10px;
+  font-size: 10px;
 }
 
 body {
   background-color: #FAFAFA;
   color: #000;
   font-family: 'Open Sans', sans-serif;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
 }
 
 .container {
@@ -51,7 +58,6 @@ body {
   color: #000;
   font-size: 1.6rem;
   text-decoration: none;
-  padding-right: 6px;
 }
 
 .stories {
@@ -93,4 +99,62 @@ body {
 
 .stories__list-item--has-new {
   background: linear-gradient(45deg, rgba(245,160,77,1) 0%, rgba(160,15,139,1) 100%);
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 728px) .feed {
+  padding: 16px 0;
+}
+
+.post {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.post__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.user {
+  align-items: center;
+  display: flex;
+}
+
+.user__avatar {
+  border-radius: 100%;
+  display: flex;
+  height: 40px;
+  margin-right: 8px;
+  overflow: hidden;
+  width: 40px;
+}
+
+.user__avatar img {
+  height: 100%;
+  width: 100%;
+}
+
+.user__name {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.post__button {
+  font-size: 1.4rem;
 }
