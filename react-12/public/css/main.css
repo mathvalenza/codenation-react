@@ -184,3 +184,33 @@ button {
   margin-left: auto;
   justify-self: flex-end;
 }
+
+.post__likes {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: flex-start;
+  padding: 8px;
+}
+
+.user__photo {
+  height: 30px;
+  margin-right: 8px;
+  width: 30px;
+}
+
+.user__photo img {
+  border-radius: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.post__likes-description {
+  font-size: 1.2rem;
+}
+
+.post__likes-description a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
