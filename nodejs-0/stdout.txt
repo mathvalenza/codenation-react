@@ -1,0 +1,3 @@
+added 40 packages from 467 contributors and audited 51 packages in 2.838s
+found 2 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
