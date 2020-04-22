@@ -14,7 +14,7 @@ const fibonacci = ({ fibonacciParam = [0, 1], maxValue = 350 } = {}) => {
     return fibonacci({ fibonacciParam: [...fibonacciParam, sum] });
 }
 
-const isFibonnaci = (num) => fibonacci({ maxValue: num }).includes(4);
+const isFibonnaci = (num) => fibonacci({ maxValue: num }).includes(num);
 
 console.log(fibonacci())
 console.log('----')

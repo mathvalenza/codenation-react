@@ -1,3 +1,19 @@
-added 40 packages from 467 contributors and audited 51 packages in 2.838s
-found 2 low severity vulnerabilities
-  run `npm audit fix` to fix them, or `npm audit` for details
+
+> nodejs-0@1.0.0 test /home/matheus/codenation/nodejs-0
+> mocha test/index.test.js
+
+[ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377 ]
+----
+true
+
+
+  fibonacci
+    ✓ should get fibonacci sequence until it passes 350
+
+  isFibonacci
+    ✓ should return true when the number is a fibonacci
+    ✓ should return false when the number isn't a fibonacci
+
+
+  3 passing (11ms)
+
