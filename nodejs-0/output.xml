@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.003" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2020-04-22T01:11:09" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="fibonacci" timestamp="2020-04-22T01:11:09" tests="1" file="/home/matheus/codenation/nodejs-0/test/submit.test.js" failures="0" time="0.003">
+    <testcase name="fibonacci should get fibonacci sequence until it passes 350" time="0.003" classname="should get fibonacci sequence until it passes 350">
+    </testcase>
+  </testsuite>
+  <testsuite name="isFibonacci" timestamp="2020-04-22T01:11:09" tests="2" file="/home/matheus/codenation/nodejs-0/test/submit.test.js" failures="0" time="0">
+    <testcase name="isFibonacci should return true when the number is a fibonacci" time="0" classname="should return true when the number is a fibonacci">
+    </testcase>
+    <testcase name="isFibonacci should return false when the number isn&apos;t a fibonacci" time="0" classname="should return false when the number isn&apos;t a fibonacci">
+    </testcase>
+  </testsuite>
+</testsuites>
