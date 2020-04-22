@@ -2,20 +2,23 @@
 
 const getSum = arr => arr.reduce((acc, crr) => acc + crr);
 
-const fibonacci = (fibonacciParam = [0, 1], maxValue = 350) => {
-    const sum = getSum(fibonacciParam);
+const fibonacci = ({ fibonacciParam = [0, 1], maxValue = 350 } = {}) => {
+    const temp = [...fibonacciParam];
+    const lastElement = temp.pop();
+    const penultElement = temp.pop();
+    const sum = lastElement + penultElement;
 
-    console.log(sum);
     if (sum > maxValue)
-        return [...fibonacciParam, sum]
+        return [...fibonacciParam, sum];
 
-    return fibonacci([...fibonacciParam, sum]);
-    
+    return fibonacci({ fibonacciParam: [...fibonacciParam, sum] });
 }
 
-const isFibonnaci = (num) => null
+const isFibonnaci = (num) => fibonacci({ maxValue: num }).includes(4);
 
-fibonacci()
+console.log(fibonacci())
+console.log('----')
+console.log(isFibonnaci(5))
 
 module.exports = {
     fibonacci,
