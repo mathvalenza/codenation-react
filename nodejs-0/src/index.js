@@ -1,7 +1,5 @@
 'use strict'
 
-const getSum = arr => arr.reduce((acc, crr) => acc + crr);
-
 const fibonacci = ({ fibonacciParam = [0, 1], maxValue = 350 } = {}) => {
     const temp = [...fibonacciParam];
     const lastElement = temp.pop();
