@@ -1,15 +1,13 @@
-'use strict'
+'use strict';
 
 const fibonacci = ({ fibonacciParam = [0, 1], maxValue = 350 } = {}) => {
-    const temp = [...fibonacciParam];
-    const lastElement = temp.pop();
-    const penultElement = temp.pop();
-    const sum = lastElement + penultElement;
+    const [penultElement, lastElement] = fibonacciParam.slice(-2);
+    const newElement = lastElement + penultElement;
 
-    if (sum > maxValue)
-        return [...fibonacciParam, sum];
+    if (newElement > maxValue)
+        return [...fibonacciParam, newElement];
 
-    return fibonacci({ fibonacciParam: [...fibonacciParam, sum] });
+    return fibonacci({ fibonacciParam: [...fibonacciParam, newElement] });
 }
 
 const isFibonnaci = (num) => fibonacci({ maxValue: num }).includes(num);
