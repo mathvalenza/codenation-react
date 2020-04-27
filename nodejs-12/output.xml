@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="4" failures="4" time="3.428">
+  <testsuite name="Get Shopping Cart" errors="0" failures="4" skipped="0" timestamp="2020-04-27T23:10:05" time="1.543" tests="4">
+    <testcase classname="Get Shopping Cart Deve retornar um carrinho de compras a partir do array de IDs do exemplo 1" name="Get Shopping Cart Deve retornar um carrinho de compras a partir do array de IDs do exemplo 1" time="0.033">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+- Expected  - 24
++ Received  +  1
+
+- Object {
+-   &quot;discount&quot;: &quot;15.63%&quot;,
+-   &quot;discountValue&quot;: &quot;75.00&quot;,
+-   &quot;products&quot;: Array [
+-     Object {
+-       &quot;category&quot;: &quot;T-SHIRTS&quot;,
+-       &quot;name&quot;: &quot;DISNEY CRUELLA© T-SHIRT&quot;,
+-     },
+-     Object {
+-       &quot;category&quot;: &quot;PANTS&quot;,
+-       &quot;name&quot;: &quot;KNIT JOGGING PANTS&quot;,
+-     },
+-     Object {
+-       &quot;category&quot;: &quot;SHOES&quot;,
+-       &quot;name&quot;: &quot;ASYMMETRICAL LEATHER SLIDE HEELS&quot;,
+-     },
+-     Object {
+-       &quot;category&quot;: &quot;BAGS&quot;,
+-       &quot;name&quot;: &quot;SOFT FLAP BACKPACK&quot;,
+-     },
+-   ],
+-   &quot;promotion&quot;: &quot;FULL LOOK&quot;,
+-   &quot;totalPrice&quot;: &quot;404.96&quot;,
+- }
++ Object {}
+    at Object.it (/home/matheus/codenation/nodejs-12/test/index.test.js:62:16)
+    at Object.asyncJestTest (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:100:37)
+    at resolve (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at promise.then (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</failure>
+    </testcase>
+    <testcase classname="Get Shopping Cart Deve retornar um carrinho de compras a partir do array de IDs do exemplo 2" name="Get Shopping Cart Deve retornar um carrinho de compras a partir do array de IDs do exemplo 2" time="0.004">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+- Expected  - 24
++ Received  +  1
+
+- Object {
+-   &quot;discount&quot;: &quot;4.72%&quot;,
+-   &quot;discountValue&quot;: &quot;25.00&quot;,
+-   &quot;products&quot;: Array [
+-     Object {
+-       &quot;category&quot;: &quot;T-SHIRTS&quot;,
+-       &quot;name&quot;: &quot;RUBBERIZED PRINTED T-SHIRT&quot;,
+-     },
+-     Object {
+-       &quot;category&quot;: &quot;T-SHIRTS&quot;,
+-       &quot;name&quot;: &quot;CONTRAST SLOGAN T-SHIRT&quot;,
+-     },
+-     Object {
+-       &quot;category&quot;: &quot;PANTS&quot;,
+-       &quot;name&quot;: &quot;KNIT JOGGING PANTS&quot;,
+-     },
+-     Object {
+-       &quot;category&quot;: &quot;PANTS&quot;,
+-       &quot;name&quot;: &quot;MENSWEAR PANTS&quot;,
+-     },
+-   ],
+-   &quot;promotion&quot;: &quot;DOUBLE LOOK&quot;,
+-   &quot;totalPrice&quot;: &quot;504.95&quot;,
+- }
++ Object {}
+    at Object.it (/home/matheus/codenation/nodejs-12/test/index.test.js:68:16)
+    at Object.asyncJestTest (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:100:37)
+    at resolve (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at promise.then (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</failure>
+    </testcase>
+    <testcase classname="Get Shopping Cart Deve retornar um carrinho de compras a partir do array de IDs do exemplo 3" name="Get Shopping Cart Deve retornar um carrinho de compras a partir do array de IDs do exemplo 3" time="0.003">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+- Expected  - 24
++ Received  +  1
+
+- Object {
+-   &quot;discount&quot;: &quot;1.87%&quot;,
+-   &quot;discountValue&quot;: &quot;10.00&quot;,
+-   &quot;products&quot;: Array [
+-     Object {
+-       &quot;category&quot;: &quot;T-SHIRTS&quot;,
+-       &quot;name&quot;: &quot;PINK PANTHER™ T-SHIRT&quot;,
+-     },
+-     Object {
+-       &quot;category&quot;: &quot;T-SHIRTS&quot;,
+-       &quot;name&quot;: &quot;DISNEY CRUELLA© T-SHIRT&quot;,
+-     },
+-     Object {
+-       &quot;category&quot;: &quot;T-SHIRTS&quot;,
+-       &quot;name&quot;: &quot;RUBBERIZED PRINTED T-SHIRT&quot;,
+-     },
+-     Object {
+-       &quot;category&quot;: &quot;T-SHIRTS&quot;,
+-       &quot;name&quot;: &quot;CONTRAST SLOGAN T-SHIRT&quot;,
+-     },
+-   ],
+-   &quot;promotion&quot;: &quot;SINGLE LOOK&quot;,
+-   &quot;totalPrice&quot;: &quot;524.96&quot;,
+- }
++ Object {}
+    at Object.it (/home/matheus/codenation/nodejs-12/test/index.test.js:74:16)
+    at Object.asyncJestTest (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:100:37)
+    at resolve (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at promise.then (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</failure>
+    </testcase>
+    <testcase classname="Get Shopping Cart Deve retornar um carrinho de compras a partir do array de IDs do exemplo 4" name="Get Shopping Cart Deve retornar um carrinho de compras a partir do array de IDs do exemplo 4" time="0.004">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+- Expected  - 32
++ Received  +  1
+
+- Object {
+-   &quot;discount&quot;: &quot;14.21%&quot;,
+-   &quot;discountValue&quot;: &quot;130.00&quot;,
+-   &quot;products&quot;: Array [
+-     Object {
+-       &quot;category&quot;: &quot;T-SHIRTS&quot;,
+-       &quot;name&quot;: &quot;PINK PANTHER™ T-SHIRT&quot;,
+-     },
+-     Object {
+-       &quot;category&quot;: &quot;T-SHIRTS&quot;,
+-       &quot;name&quot;: &quot;RUBBERIZED PRINTED T-SHIRT&quot;,
+-     },
+-     Object {
+-       &quot;category&quot;: &quot;T-SHIRTS&quot;,
+-       &quot;name&quot;: &quot;CONTRAST SLOGAN T-SHIRT&quot;,
+-     },
+-     Object {
+-       &quot;category&quot;: &quot;PANTS&quot;,
+-       &quot;name&quot;: &quot;KNIT JOGGING PANTS&quot;,
+-     },
+-     Object {
+-       &quot;category&quot;: &quot;SHOES&quot;,
+-       &quot;name&quot;: &quot;ASYMMETRICAL LEATHER SLIDE HEELS&quot;,
+-     },
+-     Object {
+-       &quot;category&quot;: &quot;SHOES&quot;,
+-       &quot;name&quot;: &quot;SLINGBACK KITTEN HEEL SHOES WITH METAL DETAIL&quot;,
+-     },
+-   ],
+-   &quot;promotion&quot;: &quot;TRIPLE LOOK&quot;,
+-   &quot;totalPrice&quot;: &quot;784.94&quot;,
+- }
++ Object {}
+    at Object.it (/home/matheus/codenation/nodejs-12/test/index.test.js:80:16)
+    at Object.asyncJestTest (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:100:37)
+    at resolve (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at promise.then (/home/matheus/codenation/nodejs-12/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
