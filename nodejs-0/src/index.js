@@ -4,7 +4,8 @@ const fibonacci = ({ fibonacciParam = [0, 1], maxValue = 350 } = {}) => {
     const lastElement = fibonacciParam[fibonacciParam.length-1];
     const penultElement = fibonacciParam[fibonacciParam.length-2];
 
-    const newSequence = [...fibonacciParam, lastElement + penultElement];
+    const newElement = lastElement + penultElement;
+    const newSequence = [...fibonacciParam, newElement];
 
     if (newElement > maxValue)
         return newSequence;
