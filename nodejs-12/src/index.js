@@ -9,41 +9,45 @@ function getPromotion(categories) {
 
   const differentCategoriesCount = Object.entries(categoriesByAmount).length;
 
-  if (differentCategoriesCount === 0)
-    return null;
-
   return promotions[differentCategoriesCount-1];
 };
 
-function getShoppingCart(ids, productsList) {
-  const chosedProducts = productsList.filter(({ id }) => ids.includes(id));
+function getPromotionValue(products, promotion) {
+  return products.reduce((acum, product) => {
+    const productPromotion = product.promotions.find(({ looks }) => looks.includes(promotion));
 
-  const products = chosedProducts.map((product) => ({
-      name: product.name,
-      category: product.category,
-    }));
+    if (!!productPromotion)
+      return acum + productPromotion.price;
+
+    return acum + product.regularPrice;
+  }, 0);
+}
+
+function getShoppingCart(ids, productsList) {
+  const chosenProducts = productsList.filter(({ id }) => ids.includes(id));
+
+  const products = chosenProducts.map((product) => ({
+    name: product.name,
+    category: product.category,
+  }));
   
   const promotion = getPromotion(products.map(({ category }) => category));
 
-  const expectedValue = chosedProducts.map(({ regularPrice }) => regularPrice)
-    .reduce((acum, value) => acum + value)
-    .toFixed(2);
+  const expectedValue = chosenProducts.reduce((acum, product) => acum + product.regularPrice, 0);
 
-  const promotionValue = 0;
+  const promotionValue = getPromotionValue(chosenProducts, promotion);
 
-  const discountValue = 0;
+  const discountValue = expectedValue - promotionValue;
 
-  const discountPercentage = promotionValue / expectedValue;
+  const discountPercentage = (1 - (promotionValue / expectedValue)) * 100;
 
   return {
     products,
     promotion,
-    totalPrice: promotionValue,
-    discountValue,
-    discountPercentage,
+    totalPrice: promotionValue.toFixed(2),
+    discountValue: discountValue.toFixed(2),
+    discount: `${discountPercentage.toFixed(2)}%`,
   };
 };
-
-console.log(getShoppingCart([120, 230, 310, 490], products));
 
 module.exports = { getShoppingCart };
