@@ -29,12 +29,18 @@ function getShoppingCart(ids, productsList) {
     .reduce((acum, value) => acum + value)
     .toFixed(2);
 
+  const promotionValue = 0;
+
   const discountValue = 0;
+
+  const discountPercentage = promotionValue / expectedValue;
 
   return {
     products,
     promotion,
-    totalPrice: expectedValue - discountValue,
+    totalPrice: promotionValue,
+    discountValue,
+    discountPercentage,
   };
 };
 
