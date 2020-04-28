@@ -16,18 +16,25 @@ function getPromotion(categories) {
 };
 
 function getShoppingCart(ids, productsList) {
-  const products = productsList
-    .filter(({ id }) => ids.includes(id))
-    .map((product) => ({
+  const chosedProducts = productsList.filter(({ id }) => ids.includes(id));
+
+  const products = chosedProducts.map((product) => ({
       name: product.name,
       category: product.category,
     }));
   
   const promotion = getPromotion(products.map(({ category }) => category));
 
+  const expectedValue = chosedProducts.map(({ regularPrice }) => regularPrice)
+    .reduce((acum, value) => acum + value)
+    .toFixed(2);
+
+  const discountValue = 0;
+
   return {
     products,
     promotion,
+    totalPrice: expectedValue - discountValue,
   };
 };
 
