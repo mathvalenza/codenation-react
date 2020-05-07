@@ -3,7 +3,7 @@ import React from 'react';
 class Filters extends React.Component {
 	render() {
 		return (
-			<div className="container">
+			<div data-testid="filters" className="container">
 				<section className="filters">
 					<div className="filters__search">
 						<input type="text" className="filters__search__input" placeholder="Pesquisar" />
