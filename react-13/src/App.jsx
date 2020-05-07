@@ -13,11 +13,11 @@ class App extends React.Component {
       contacts: [],
       filteredContacts: [],
       searchString: '',
-      orderBy: 'name',
+      sortBy: 'name',
     };
     
     this.handleSearch = this.handleSearch.bind(this);
-    this.handleOrder = this.handleOrder.bind(this);
+    this.handleSort = this.handleSort.bind(this);
 	}
 	
 	componentDidMount() {
@@ -34,9 +34,9 @@ class App extends React.Component {
     this.setState({ filteredContacts });
   }
 
-  handleOrder(field) {
+  handleSort(field) {
     console.log('parent', field);
-    this.setState({ orderBy: field })
+    this.setState({ sortBy: field })
   }
 
   filterByText(search) {
@@ -56,8 +56,9 @@ class App extends React.Component {
 
         <Filters
           searchString={this.state.searchString}
+          sortBy={this.state.sortBy}
           onChangeSearch={this.handleSearch}
-          onChangeOrder={this.handleOrder}
+          onChangeSort={this.handleSort}
         />
 
         <Contacts contacts={this.state.filteredContacts}/>

@@ -13,7 +13,7 @@ class Filters extends React.Component {
 	}
 
 	handleClick(value) {
-		this.props.onChangeOrder(value);
+		this.props.onChangeSort(value);
 	}
 
 	render() {
@@ -36,31 +36,31 @@ class Filters extends React.Component {
 
 					<button
 						onClick={() => this.handleClick('name')}
-						className="filters__item is-selected">
+						className={`filters__item ${this.props.sortBy === 'name' ? 'is-selected' : ''}`}>
 						Nome <i className="fas fa-sort-down" />
 					</button>
 
 					<button
 						onClick={() => this.handleClick('country')}
-						className="filters__item">
+						className={`filters__item ${this.props.sortBy === 'country' ? 'is-selected' : ''}`}>
 						País <i className="fas fa-sort-down" />
 					</button>
 
 					<button
 						onClick={() => this.handleClick('company')}
-						className="filters__item">
+						className={`filters__item ${this.props.sortBy === 'company' ? 'is-selected' : ''}`}>
 						Empresa <i className="fas fa-sort-down" />
 					</button>
 
 					<button
 						onClick={() => this.handleClick('department')}
-						className="filters__item">
+						className={`filters__item ${this.props.sortBy === 'department' ? 'is-selected' : ''}`}>
 						Departamento <i className="fas fa-sort-down" />
 					</button>
 
 					<button
 						onClick={() => this.handleClick('admissionDate')}
-						className="filters__item">
+						className={`filters__item ${this.props.sortBy === 'admissionDate' ? 'is-selected' : ''}`}>
 						Data de admissão <i className="fas fa-sort-down" />
 					</button>
 				</section>
