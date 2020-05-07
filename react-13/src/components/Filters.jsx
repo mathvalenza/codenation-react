@@ -4,17 +4,16 @@ class Filters extends React.Component {
 	constructor() {
 		super();
 
-		this.state = {
-			searchString: '',
-		};
-
 		this.handleChange = this.handleChange.bind(this);
+		this.handleClick = this.handleClick.bind(this);
 	}
 
 	handleChange(event) {
-		this.setState({ searchString: event.target.value });
+		this.props.onChangeSearch(event.target.value);
+	}
 
-		this.props.onChange(event.target.value);
+	handleClick(value) {
+		this.props.onChangeOrder(value);
 	}
 
 	render() {
@@ -26,7 +25,7 @@ class Filters extends React.Component {
 							type="text"
 							className="filters__search__input"
 							placeholder="Pesquisar"
-							value={this.state.searchString}
+							value={this.props.searchString}
 							onChange={this.handleChange}
 						/>
 
@@ -35,23 +34,33 @@ class Filters extends React.Component {
 						</button>
 					</div>
 
-					<button className="filters__item is-selected">
+					<button
+						onClick={() => this.handleClick('name')}
+						className="filters__item is-selected">
 						Nome <i className="fas fa-sort-down" />
 					</button>
 
-					<button className="filters__item">
+					<button
+						onClick={() => this.handleClick('country')}
+						className="filters__item">
 						País <i className="fas fa-sort-down" />
 					</button>
 
-					<button className="filters__item">
+					<button
+						onClick={() => this.handleClick('company')}
+						className="filters__item">
 						Empresa <i className="fas fa-sort-down" />
 					</button>
 
-					<button className="filters__item">
+					<button
+						onClick={() => this.handleClick('department')}
+						className="filters__item">
 						Departamento <i className="fas fa-sort-down" />
 					</button>
 
-					<button className="filters__item">
+					<button
+						onClick={() => this.handleClick('admissionDate')}
+						className="filters__item">
 						Data de admissão <i className="fas fa-sort-down" />
 					</button>
 				</section>

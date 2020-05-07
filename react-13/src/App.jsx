@@ -12,9 +12,12 @@ class App extends React.Component {
 		this.state = {
       contacts: [],
       filteredContacts: [],
+      searchString: '',
+      orderBy: 'name',
     };
     
-    this.handleTyping = this.handleTyping.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
+    this.handleOrder = this.handleOrder.bind(this);
 	}
 	
 	componentDidMount() {
@@ -23,16 +26,20 @@ class App extends React.Component {
 			.then((contacts) => this.setState({ contacts, filteredContacts: contacts }));	
   }
   
-  handleTyping(value) {
-    const filteredContacts = this.filterBySearchString(value);
+  handleSearch(searchString) {
+    this.setState({ searchString })
 
-    console.log('filteredContacts', filteredContacts);
-    console.log('value: ', value);
+    const filteredContacts = this.filterByText(searchString);
     
     this.setState({ filteredContacts });
   }
 
-  filterBySearchString(search) {
+  handleOrder(field) {
+    console.log('parent', field);
+    this.setState({ orderBy: field })
+  }
+
+  filterByText(search) {
     if (!search)
       return this.state.contacts;
 
@@ -47,7 +54,11 @@ class App extends React.Component {
       <React.Fragment>
         <Topbar />
 
-        <Filters onChange={this.handleTyping}/>
+        <Filters
+          searchString={this.state.searchString}
+          onChangeSearch={this.handleSearch}
+          onChangeOrder={this.handleOrder}
+        />
 
         <Contacts contacts={this.state.filteredContacts}/>
       </React.Fragment>
