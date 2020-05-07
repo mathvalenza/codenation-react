@@ -1,12 +1,34 @@
 import React from 'react';
 
 class Filters extends React.Component {
+	constructor() {
+		super();
+
+		this.state = {
+			searchString: '',
+		};
+
+		this.handleChange = this.handleChange.bind(this);
+	}
+
+	handleChange(event) {
+		this.setState({ searchString: event.target.value });
+
+		this.props.onChange(event.target.value);
+	}
+
 	render() {
 		return (
 			<div data-testid="filters" className="container">
 				<section className="filters">
 					<div className="filters__search">
-						<input type="text" className="filters__search__input" placeholder="Pesquisar" />
+						<input
+							type="text"
+							className="filters__search__input"
+							placeholder="Pesquisar"
+							value={this.state.searchString}
+							onChange={this.handleChange}
+						/>
 
 						<button className="filters__search__icon">
 							<i className="fa fa-search"/>
