@@ -13,7 +13,7 @@ class App extends React.Component {
       contacts: [],
       filteredContacts: [],
       searchString: '',
-      sortBy: 'name',
+      sortBy: '',
     };
     
     this.handleSearch = this.handleSearch.bind(this);
@@ -35,8 +35,13 @@ class App extends React.Component {
   }
 
   handleSort(field) {
-    console.log('parent', field);
-    this.setState({ sortBy: field })
+    if (field === this.state.sortBy) {
+      this.setState({ sortBy: '' });
+      this.sortByField();
+    } else {
+      this.setState({ sortBy: field });
+      this.sortByField(field);
+    }
   }
 
   filterByText(search) {
@@ -47,6 +52,15 @@ class App extends React.Component {
       [name, phone, country, admissionDate, company, department]
       .some(value => value.toUpperCase().includes(search.toUpperCase()))
     );
+  }
+
+  sortByField(sortBy = 'id') {
+    return this.state.filteredContacts.sort((current, next) => {
+      if (current[sortBy].toUpperCase() < next[sortBy].toUpperCase())
+        return -1;
+
+      return 1;
+    });    
   }
 
   render() {
