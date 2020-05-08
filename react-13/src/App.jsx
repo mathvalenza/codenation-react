@@ -7,9 +7,9 @@ import Contacts from './components/Contacts';
 
 class App extends React.Component {
   constructor() {
-		super();
+    super();
 
-		this.state = {
+    this.state = {
       contacts: [],
       filteredContacts: [],
       searchString: '',
@@ -18,12 +18,12 @@ class App extends React.Component {
     
     this.handleSearch = this.handleSearch.bind(this);
     this.handleSort = this.handleSort.bind(this);
-	}
-	
-	componentDidMount() {
-		fetch('https://5e82ac6c78337f00160ae496.mockapi.io/api/v1/contacts')
-			.then((response) => response.json())
-			.then((contacts) => this.setState({ contacts, filteredContacts: contacts }));	
+  }
+  
+  componentDidMount() {
+    fetch('https://5e82ac6c78337f00160ae496.mockapi.io/api/v1/contacts')
+      .then((response) => response.json())
+      .then((contacts) => this.setState({ contacts, filteredContacts: contacts }));	
   }
   
   handleSearch(searchString) {
