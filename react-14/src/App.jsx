@@ -65,7 +65,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div data-testid="app" className="app">
         <Topbar />
 
         <Filters
@@ -76,7 +76,7 @@ class App extends React.Component {
         />
 
         <Contacts contacts={this.state.filteredContacts}/>
-      </React.Fragment>
+      </div>
     )
   }
 }
