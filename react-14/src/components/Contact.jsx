@@ -12,8 +12,11 @@ class Contact extends React.Component {
   componentDidMount() {
     const transformedDate = new Date(this.props.data.admissionDate).toLocaleDateString();
     const [year, month, day] = transformedDate.split('-');
-
-    this.setState({ localDate: `${day.padStart(2, '0')}/${month.padStart(2, '0')}/${year}` });
+    if (year && month && day) {
+      const localDate = `${day.padStart(2, '0')}/${month.padStart(2, '0')}/${year}`;
+      
+      this.setState({ localDate  });
+    }
   }
 
   render() {
