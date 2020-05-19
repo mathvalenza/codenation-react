@@ -5,10 +5,7 @@ import SuccessMessage from '../../components/SuccessMessage';
 import './UserForm.scss';
 
 const UserForm = () => {
-  return (
-    <React.Fragment>
-    </React.Fragment>
-  );
+  return <div data-testid="user-form"></div>;
 };
 
 export default UserForm;

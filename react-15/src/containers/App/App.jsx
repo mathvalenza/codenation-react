@@ -7,9 +7,6 @@ import Routes from '../../routes';
 
 import './App.scss';
 
-const App = () => (
-  <div>
-  </div>
-);
+const App = () => <div data-testid="app"></div>;
 
 export default App;
