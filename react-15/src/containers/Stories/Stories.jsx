@@ -4,7 +4,7 @@ import Story from '../../components/Story';
 
 import './Stories.scss';
 
-const Stories = ({ stories, getUserHandler }) => {
+const Stories = ({ stories, getUserHandler, showStory }) => {
   return (
     <React.Fragment>
       <section className="stories">
