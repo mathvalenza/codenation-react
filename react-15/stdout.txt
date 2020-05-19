@@ -1,0 +1,4 @@
+
+> instadev@0.1.0 submit /home/matheus/codenation/react-15
+> react-scripts test src/__tests__/submit.test.js --reporters=default --reporters=jest-junit "--watchAll=false"
+
