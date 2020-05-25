@@ -7,6 +7,13 @@ import Routes from '../../routes';
 
 import './App.scss';
 
-const App = () => <div data-testid="app"></div>;
+const App = () => (
+  <div data-testid="app">
+    <BrowserRouter>
+      <Topbar />
+      <Routes />
+    </BrowserRouter>
+  </div>
+);
 
 export default App;
