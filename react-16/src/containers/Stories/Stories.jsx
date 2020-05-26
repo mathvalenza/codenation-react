@@ -8,11 +8,11 @@ const Stories = ({ stories, getUserHandler }) => {
   const [showStory, setShowStory] = useState(false);
   const [selectedUser, setSelectedUser] = useState({});
   const [selectedStory, setSelectedHistory] = useState({});
-  const findStoryById = (id) => stories.find((story) => story.id === id);
 
-  const handleStory = (story) => {
-    const selectedStory = findStoryById(story.id);
-    const userData = getUserHandler(story.userId);
+  const getStoryById = (id) => stories.find((story) => story.id === id);
+
+  const handleStory = (story, userData) => {
+    const selectedStory = getStoryById(story.id);
 
     setSelectedUser(userData);
     setSelectedHistory(selectedStory);
@@ -30,7 +30,7 @@ const Stories = ({ stories, getUserHandler }) => {
               userData && (
                 <button
                   key={story.id}
-                  onClick={() => handleStory(story)}
+                  onClick={() => handleStory(story, userData)}
                   className={`user__thumb ${
                     index === 0 && 'user__thumb--hasNew'
                   }`}
