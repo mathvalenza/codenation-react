@@ -11,29 +11,13 @@ const UserForm = () => {
   const [email, setEmail] = useState('novo_usuario@gmail.com');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSetName = ({ target }) => {
-    const { value } = target;
+  const handleSetName = (event) => setName(event.target.value);
 
-    setName(value);
-  };
+  const handleSetAvatar = (event) => setAvatar(event.target.value);
 
-  const handleSetAvatar = ({ target }) => {
-    const { value } = target;
+  const handleSetUserName = (event) => setUserName(event.target.value);
 
-    setAvatar(value);
-  };
-
-  const handleSetUserName = ({ target }) => {
-    const { value } = target;
-
-    setUserName(value);
-  };
-
-  const handleSetEmail = ({ target }) => {
-    const { value } = target;
-
-    setEmail(value);
-  };
+  const handleSetEmail = (event) => setEmail(event.target.value);
 
   const handleAddUser = (event) => {
     event.preventDefault();

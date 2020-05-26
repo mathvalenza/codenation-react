@@ -13,15 +13,10 @@ const FeedRoute = () => {
   const [posts, setPosts] = useState([]);
   const [usersFetched, setUsersFetched] = useState(0);
 
-  const getUserPostById = (postUserId) => {
-    console.log('getUserPostById');
-
-    return users.find((user) => postUserId === user.id);
-  };
+  const getUserPostById = (postUserId) =>
+    users.find((user) => postUserId === user.id);
 
   useEffect(() => {
-    console.log('users');
-
     function getUsers() {
       fetch('https://5e7d0266a917d70016684219.mockapi.io/api/v1/users')
         .then((res) => res.json())
@@ -32,7 +27,6 @@ const FeedRoute = () => {
   }, []);
 
   useEffect(() => {
-    console.log('stories');
     function getStories() {
       fetch('https://5e7d0266a917d70016684219.mockapi.io/api/v1/stories')
         .then((res) => res.json())
