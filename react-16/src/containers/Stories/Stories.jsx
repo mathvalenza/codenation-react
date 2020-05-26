@@ -6,14 +6,52 @@ import './Stories.scss';
 
 const Stories = ({ stories, getUserHandler }) => {
   const [showStory, setShowStory] = useState(false);
+  const [selectedUser, setSelectedUser] = useState({});
+  const [selectedStory, setSelectedHistory] = useState({});
+  const findStoryById = (id) => stories.find((story) => story.id === id);
+
+  const handleStory = (story) => {
+    const selectedStory = findStoryById(story.id);
+    const userData = getUserHandler(story.userId);
+
+    setSelectedUser(userData);
+    setSelectedHistory(selectedStory);
+    setShowStory(!showStory);
+  };
 
   return (
     <React.Fragment>
       <section className="stories" data-testid="stories">
-        <div className="container"></div>
+        <div className="container">
+          {stories.map((story, index) => {
+            const userData = getUserHandler(story.userId);
+
+            return (
+              userData && (
+                <button
+                  key={story.id}
+                  onClick={() => handleStory(story)}
+                  className={`user__thumb ${
+                    index === 0 && 'user__thumb--hasNew'
+                  }`}
+                >
+                  <div className="user__thumb__wrapper">
+                    <img src={userData.avatar} alt={userData.name} />
+                  </div>
+                </button>
+              )
+            );
+          })}
+        </div>
       </section>
 
-      {showStory && <Story />}
+      {showStory && (
+        <Story
+          story={selectedStory}
+          user={selectedUser}
+          handleClose={() => setShowStory(false)}
+        />
+      )}
     </React.Fragment>
   );
 };
