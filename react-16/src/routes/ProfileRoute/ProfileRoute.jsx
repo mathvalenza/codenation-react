@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 import UserProfile from '../../containers/UserProfile';
 import UserPosts from '../../containers/UserPosts';
@@ -13,14 +14,12 @@ const ProfileRoute = () => {
   const [email, setEmail] = useState('');
   const [userPosts, setUserPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const { username: userNameParam } = useParams();
 
   useEffect(() => {
-    const { pathname } = window.location;
-    const userName = pathname.split('/')[2];
-
     function getUser() {
       fetch(
-        `https://5e7d0266a917d70016684219.mockapi.io/api/v1/users?search=${userName}`
+        `https://5e7d0266a917d70016684219.mockapi.io/api/v1/users?search=${userNameParam}`
       )
         .then((response) => response.json())
         .then((profileData) => {
@@ -34,7 +33,7 @@ const ProfileRoute = () => {
         });
     }
     getUser();
-  }, []);
+  }, [userNameParam]);
 
   useEffect(() => {
     if (id) {
