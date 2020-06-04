@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="11" failures="0" time="4.455">
+  <testsuite name="Spotify Pocket" errors="0" failures="0" skipped="0" timestamp="2020-06-04T23:06:52" time="3.442" tests="11">
+    <testcase classname="Spotify Pocket Components data-testid match should should render properly the &lt;Loading&gt; component" name="Spotify Pocket Components data-testid match should should render properly the &lt;Loading&gt; component" time="0.05">
+    </testcase>
+    <testcase classname="Spotify Pocket Components data-testid match should should render properly the &lt;Logo&gt; component" name="Spotify Pocket Components data-testid match should should render properly the &lt;Logo&gt; component" time="0.016">
+    </testcase>
+    <testcase classname="Spotify Pocket Components data-testid match should should render properly the &lt;RouteHeader&gt; component" name="Spotify Pocket Components data-testid match should should render properly the &lt;RouteHeader&gt; component" time="0.012">
+    </testcase>
+    <testcase classname="Spotify Pocket Components data-testid match should should render properly the &lt;WelcomeBox&gt; component" name="Spotify Pocket Components data-testid match should should render properly the &lt;WelcomeBox&gt; component" time="0.004">
+    </testcase>
+    <testcase classname="Spotify Pocket Containers data-testid match should should render properly the &lt;App&gt; container" name="Spotify Pocket Containers data-testid match should should render properly the &lt;App&gt; container" time="0.032">
+    </testcase>
+    <testcase classname="Spotify Pocket Containers data-testid match should should render properly the &lt;Authorize&gt; container" name="Spotify Pocket Containers data-testid match should should render properly the &lt;Authorize&gt; container" time="0.006">
+    </testcase>
+    <testcase classname="Spotify Pocket Containers data-testid match should should render properly the &lt;Categories&gt; container" name="Spotify Pocket Containers data-testid match should should render properly the &lt;Categories&gt; container" time="0.059">
+    </testcase>
+    <testcase classname="Spotify Pocket Containers data-testid match should should render properly the &lt;CategoryItem&gt; container" name="Spotify Pocket Containers data-testid match should should render properly the &lt;CategoryItem&gt; container" time="0.007">
+    </testcase>
+    <testcase classname="Spotify Pocket Containers data-testid match should should render properly the &lt;Login&gt; container" name="Spotify Pocket Containers data-testid match should should render properly the &lt;Login&gt; container" time="0.011">
+    </testcase>
+    <testcase classname="Spotify Pocket Containers data-testid match should should render properly the &lt;PlaylistItem&gt; container" name="Spotify Pocket Containers data-testid match should should render properly the &lt;PlaylistItem&gt; container" time="0.009">
+    </testcase>
+    <testcase classname="Spotify Pocket Containers data-testid match should should render properly the &lt;Playlists&gt; container" name="Spotify Pocket Containers data-testid match should should render properly the &lt;Playlists&gt; container" time="0.055">
+    </testcase>
+  </testsuite>
+</testsuites>
