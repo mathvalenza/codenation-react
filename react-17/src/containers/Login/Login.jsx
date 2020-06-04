@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { debounce } from 'lodash';
 import Ink from 'react-ink';
 
-import { endpoints } from '../../modules/endpoints';
+import { endpoints } from 'modules/endpoints';
 
-import backgroundImageMobile from '../../assets/images/app-intro-1.jpg';
-import backgroundImageDesktop from '../../assets/images/app-intro-2.jpg';
+import backgroundImageMobile from 'assets/images/app-intro-1.jpg';
+import backgroundImageDesktop from 'assets/images/app-intro-2.jpg';
 
-import { Logo } from '../../components';
+import { Logo } from 'components';
 
 import './Login.scss';
 

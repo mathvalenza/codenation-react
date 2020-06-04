@@ -20,7 +20,10 @@ const Topbar = () => {
           <span className="user__name">{user.name}</span>
 
           <figure className="user__thumb">
-            <img src={user.thumb} alt={`foto de perfil de ${user.name}`} />
+            <img
+              src={user.thumb || ''}
+              alt={`foto de perfil de ${user.name}`}
+            />
           </figure>
         </div>
       </div>
