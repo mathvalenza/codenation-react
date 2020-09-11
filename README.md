@@ -1,3 +1,12 @@
-# Codenation - Aceleração React Online
+# Codenation - AceleraDev React Online
 
-10 semanas de imersão em programação online para aprendizado e aplicação de desenvolvimento front-end utilizando React.
+10 weeks online course about front-end development using React
+
+Course content:
+
+* JavaScript
+* Redux
+* Router
+* Components
+* Lifecycle
+* Tests
