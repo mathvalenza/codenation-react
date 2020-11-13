@@ -10,3 +10,5 @@ Course content:
 * Components
 * Lifecycle
 * Tests
+
+See also [the course final project](https://github.com/mathvalenza/fashionista-ecommerce)
